@@ -3,6 +3,33 @@ html, body {
     box-sizing: border-box;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        left: -5%;
+    }
+    100% {
+        opacity: 1;
+        left: 0%;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.animate {
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+}
+
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -42,6 +69,7 @@ body
   color:white;
   font-weight:lighter;
   color: #fff;
+  letter-spacing: 2px;
 }
 .tagline
 {
@@ -67,11 +95,102 @@ background: #3945e2;
   Chat Page
 */
 
-.members{
+.member-area{
   position:fixed;
   top:0;
   bottom:0;
   left:0;
   width:30%;
   background-color: grey;
+  color:white;
+  letter-spacing: 1px;
+}
+
+.user-info
+{
+  background:#2f4f4f;
+  padding:10px;
+  font-weight:bold;
+}
+.logout
+{
+  float:right;
+}
+.member
+{
+  padding:10px;
+  border-bottom: solid 1px darkgrey;
+}
+.member:hover
+{
+  background-color: darkgrey;
+  font-weight: bold;
+  cursor:pointer;
+}
+.message-area
+{
+  background-color:azure;
+  left:30%;
+  width:70%;
+  position:fixed;
+  bottom:0;
+  top:0;
+}
+.chat-info
+{
+  background-color:#2f4f4f;
+  padding:10px;
+color:white;
+font-weight: bold;
+letter-spacing: 1px;
+}
+.member.active
+{
+  background-color: darkgrey;
+  font-weight: bold;
+  cursor:pointer;
+}
+.messages
+{
+  background: #faebd7;
+  height: 100%;
+  padding:10px;
+  height:90%;
+  overflow: auto;
+}
+.message
+{
+  background:grey;
+  padding:10px;
+  margin-bottom:10px;
+  border-radius: 8px;
+  color:white;
+  width:50%;
+}
+.message.sentmsg
+{
+    background:darkgrey;
+    color:white;
+    margin-bottom: 10px;
+}
+.chat-form
+{
+  position:fixed;
+  left:30%;
+  bottom:0;
+  width:70%;
+
+  padding:10px;
+}
+.chat-message
+{
+  padding:10px;
+  border:solid 1px lightgrey;
+  border-radius:4px;
+  display:block;
+  width:100%;
+}
+.messagecontainer
+{
+  margin-top=100px;
 }
