@@ -36,5 +36,17 @@ ifUserIsLoggedIn(function(){
      getElement("messages").innerHTML=messagesList;
 
    });
+
+   getElement("chat-id").value=chat_id;
+
  });
+
+ click("send-button",function(){
+   var text = getElement("message-text").value;
+
+   var chat_id=getElement("chat-id").value;
+
+   sendMessage(chat_id,text);
+ });
+
 });

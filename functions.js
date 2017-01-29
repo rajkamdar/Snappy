@@ -138,11 +138,26 @@ function loadMessages(chat_id,fn)
 
 function renderMessage(message){
   var text=message.text;
-  var msgClass="";
+  var msgClass="message";
   if(message.sender_id==window.currentUser.id){
-    msgClass="by-user";
+    msgClass="message by-user";
   }
-  var html='<div class="message">'+text+'</div>';
+  var html='<div class="'+msgClass+'">'+text+'</div>';
 
   return html;
+}
+
+function sendMessage(chat_id,text)
+{
+  var message={
+    text: text,
+    sender_id:window.currentUser.id
+  };
+
+  var database=firebase.database();
+  var chatsRef=database.ref("chats");
+  var chat=chatsRef.child(chat_id);
+  var newMessageId=chatsRef.push().key;
+
+  chat.child(newMessageId).set(message);
 }
