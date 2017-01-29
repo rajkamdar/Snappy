@@ -17,8 +17,25 @@
         <p class="tagline">
           An instant chat platform.
         </p>
-        <button class="signin"> Sign in with Google</button>
+        <button class="signin" id='signIn'> Sign in with Google</button>
     </div>
   </div>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCjup7mST5nzr_HaNvpC-EnkPRnoU4cDyc",
+    authDomain: "snappy-cd1f4.firebaseapp.com",
+    databaseURL: "https://snappy-cd1f4.firebaseio.com",
+    storageBucket: "snappy-cd1f4.appspot.com",
+    messagingSenderId: "573288517420"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  <script type="text/javascript" src="functions.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+
   </body>
 </html>

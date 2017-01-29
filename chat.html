@@ -12,25 +12,11 @@
   <body>
     <div class="member-area">
       <div class="user-info">
-        Raj Kamdar
+        <span id="user-name">Demo</span>
         <span class="logout"> Logout </span>
       </div>
-      <div class="members">
-        <div class="member">
-            Ramesh
-        </div>
-        <div class="member">
-            Suresh
-        </div>
-        <div class="member">
-            Mahesh
-        </div>
-        <div class="member active">
-            Rajesh
-        </div>
-        <div class="member">
-            Rakesh
-        </div>
+      <div class="members" id="members">
+
       </div>
     </div>
 
@@ -74,10 +60,17 @@
 
 
         <div class="message">
-          Hey Buddy
+          Hey Buddy Hey Buddy Hey Buddy Hey BuddyHey Buddy Hey Buddy Hey Buddy
+          Hey Buddy Hey Buddy Hey Buddy Hey BuddyHey Buddy Hey Buddy Hey Buddy
+          Hey Buddy Hey Buddy Hey Buddy Hey BuddyHey Buddy Hey Buddy Hey Buddy
+          Hey Buddy Hey Buddy Hey Buddy Hey BuddyHey Buddy Hey Buddy Hey Buddy
         </div>
         <div class="message sentmsg">
-          How are you?
+          How are you? How are you? How are you? How are you? How are you?
+          How are you? How are you? How are you? How are you? How are you?
+          How are you? How are you? How are you? How are you? How are you?
+          How are you? How are you? How are you? How are you? How are you?
+
         </div>
         <div class="message">
           Cool
@@ -94,5 +87,22 @@
 
       </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCjup7mST5nzr_HaNvpC-EnkPRnoU4cDyc",
+        authDomain: "snappy-cd1f4.firebaseapp.com",
+        databaseURL: "https://snappy-cd1f4.firebaseio.com",
+        storageBucket: "snappy-cd1f4.appspot.com",
+        messagingSenderId: "573288517420"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+      <script type="text/javascript" src="functions.js"></script>
+      <script type="text/javascript" src="app.js"></script>
+      <script type="text/javascript" src="chat.js"></script>
   </body>
   </html>
